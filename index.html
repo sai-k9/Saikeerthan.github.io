@@ -97,10 +97,10 @@
   <h2>Prompt Engineer | Generative AI Enthusiast</h2>
   <p class="intro">Crafting AI-driven solutions, intelligent workflows, and building with LLMs to shape tomorrow’s technology.</p>
   <div>
-    <a href="#about" class="cta-button">ABOUT</a>
-    <a href="#experience" class="cta-button">EXPERIENCE</a>
-    <a href="#projects" class="cta-button">PROJECTS</a>
-    <a href="#resume" class="cta-button">RESUME</a>
+    <a href="#" onclick="showSection('about')" class="cta-button">ABOUT</a>
+    <a href="#" onclick="showSection('experience')" class="cta-button">EXPERIENCE</a>
+    <a href="#" onclick="showSection('projects')" class="cta-button">PROJECTS</a>
+    <a href="#" onclick="showSection('resume')" class="cta-button">RESUME</a>
   </div>
 </header>
 
@@ -159,6 +159,11 @@ function showSection(id) {
   });
   document.getElementById(id).classList.add('active');
 }
+
+// Show About section by default on page load
+document.addEventListener('DOMContentLoaded', function() {
+  showSection('about');
+});
 </script>
 
 </body>
