@@ -107,7 +107,7 @@ hr { border: 0; border-top: 1px solid #ccc; margin: 30px 0; }
  <p>Focused on real-world applications for improving assistive technologies, chatbot-human interaction quality, and AI-driven accessibility tools.</p>
 </section>
 
-<section id="resume" class="section" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out;">
+<section id="resume" class="section">
   <h2>Resume</h2>
   <p>You can view or download my resume below.</p>
 
@@ -124,15 +124,14 @@ hr { border: 0; border-top: 1px solid #ccc; margin: 30px 0; }
 function showSection(id) {
   var sections = document.querySelectorAll('.section');
   sections.forEach(function(section) {
-    section.classList.remove('active');
+    section.style.display = 'none';
     section.style.opacity = 0;
-    section.style.transform = 'translateY(20px)';
   });
   var activeSection = document.getElementById(id);
-  activeSection.classList.add('active');
+  activeSection.style.display = 'block';
   setTimeout(function() {
     activeSection.style.opacity = 1;
-    activeSection.style.transform = 'translateY(0)';
+    activeSection.style.transition = 'opacity 0.6s ease-out';
   }, 50);
 }
 </script>
