@@ -4,23 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sai Keerthan | Home</title>
-  <style>/* same styles from your code */</style>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f7f7f7;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container {
+      flex: 1;
+      text-align: center;
+    }
+    header {
+      background: #4CAF50;
+      padding: 20px;
+      color: white;
+    }
+    .cta-button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      margin: 10px;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+    .cta-button:hover {
+      background-color: #45a049;
+    }
+    footer {
+      background: #f7f7f7;
+      color: #666;
+      font-size: 0.8rem;
+      padding: 15px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <h1>Sai Keerthan M</h1>
-  <h2>Prompt Engineer | Generative AI Enthusiast</h2>
-  <p class="intro">Crafting AI-driven solutions, intelligent workflows, and building with LLMs to shape tomorrow’s technology.</p>
-  <div>
-    <a href="about.html" class="cta-button">ABOUT</a>
-    <a href="experience.html" class="cta-button">EXPERIENCE</a>
-    <a href="projects.html" class="cta-button">PROJECTS</a>
-    <a href="resume.html" class="cta-button">RESUME</a>
-  </div>
-</header>
+<div class="container">
+  <header>
+    <h1>Sai Keerthan M</h1>
+    <h2>Prompt Engineer | Generative AI Enthusiast</h2>
+    <p class="intro">Crafting AI-driven solutions, intelligent workflows, and building with LLMs to shape tomorrow’s technology.</p>
+    <div>
+      <a href="about.html" class="cta-button">ABOUT</a>
+      <a href="experience.html" class="cta-button">EXPERIENCE</a>
+      <a href="projects.html" class="cta-button">PROJECTS</a>
+      <a href="resume.html" class="cta-button">RESUME</a>
+    </div>
+  </header>
+</div>
 
-<footer><p>© 2025 Sai Keerthan M</p></footer>
+<footer>
+  <p>© 2025 Sai Keerthan M</p>
+</footer>
 
 </body>
 </html>
