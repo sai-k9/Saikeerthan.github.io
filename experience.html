@@ -5,63 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Experience | Sai Keerthan</title>
   <style>
-    body, html {
+    html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
       font-family: 'Poppins', sans-serif;
       background: #f7f7f7;
       color: #333;
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
     .container {
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 60px 20px 40px;
+    }
+    .content {
+      max-width: 800px;
       text-align: center;
     }
-    header {
-      background: #4CAF50;
-      padding: 20px;
-      color: white;
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 1.4rem;
+      color: #666;
+      margin-bottom: 40px;
     }
     section {
-      padding: 60px 20px;
-      max-width: 800px;
-      margin: auto;
       text-align: left;
+      margin-top: 20px;
     }
     h3 {
       color: #4CAF50;
       margin-top: 30px;
+      font-weight: 600;
+    }
+    p {
+      line-height: 1.6;
+      margin-bottom: 20px;
     }
     footer {
-      background: #f7f7f7;
-      color: #666;
-      font-size: 0.8rem;
-      padding: 15px;
       text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      color: #666;
+      background-color: transparent;
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <div class="content">
+      <h1>Experience</h1>
+      <h2>Prompt Engineer | AI Solutions Specialist</h2>
+      <section>
+        <h3>Prompt Engineer Intern – Conflux Systems</h3>
+        <p>Developed structured prompts to fine-tune LLM outputs for enterprise chatbots. Conducted A/B testing on prompt variations, collaborated with cross-functional teams, and automated workflows using OpenAI API, LangChain, and Zapier integrations.</p>
 
-<div class="container">
-  <header>
-    <h1>Experience</h1>
-  </header>
-
-  <section>
-    <h3>Prompt Engineer Intern – Conflux Systems</h3>
-    <p>Designed structured AI prompts, ran A/B tests for optimization, collaborated with NLP researchers and product managers, and developed reusable prompt templates.</p>
-
-    <h3>Software Engineer – Cognizant</h3>
-    <p>Worked on lane detection and validation tools for autonomous vehicles. Performed image annotation, quality assurance, tool testing, and cross-team collaboration.</p>
-  </section>
-</div>
-
-<footer>
-  <p>© 2025 Sai Keerthan M</p>
-</footer>
-
+        <h3>Software Engineer – Cognizant</h3>
+        <p>Specialized in autonomous vehicle lane marking using ML labeling tools (Crowd Compute & Data Compute). Delivered high-accuracy annotations, led tool validation cycles, conducted QA checks, and trained junior team members on best practices.</p>
+      </section>
+    </div>
+  </div>
+  <footer>
+    <p>© 2025 Sai Keerthan M</p>
+  </footer>
 </body>
 </html>
