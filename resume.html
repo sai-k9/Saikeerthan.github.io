@@ -5,64 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume | Sai Keerthan</title>
   <style>
-    body, html {
+    html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
       font-family: 'Poppins', sans-serif;
       background: #f7f7f7;
       color: #333;
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
     .container {
       flex: 1;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 60px 20px 40px;
     }
-    header {
-      background: #4CAF50;
-      padding: 20px;
-      color: white;
-    }
-    section {
-      padding: 60px 20px;
+    .content {
       max-width: 800px;
-      margin: auto;
       text-align: center;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 1.4rem;
+      color: #666;
+      margin-bottom: 40px;
     }
     .cta-button {
-      display: inline-block;
       padding: 12px 24px;
       background-color: #4CAF50;
       color: white;
       text-decoration: none;
       border-radius: 5px;
       margin-top: 20px;
+      display: inline-block;
       transition: background-color 0.3s;
     }
     .cta-button:hover {
       background-color: #45a049;
     }
     footer {
-      background: #f7f7f7;
-      color: #666;
-      font-size: 0.8rem;
-      padding: 15px;
       text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      color: #666;
+      background-color: transparent;
     }
   </style>
 </head>
 <body>
 
 <div class="container">
-  <header>
+  <div class="content">
     <h1>Resume</h1>
-  </header>
-
-  <section>
-    <p>Download my latest professional resume below:</p>
-    <a href="SAI-AI-.pdf" target="_blank" class="cta-button">Download Resume (PDF)</a>
-  </section>
+    <h2>Download My Latest Professional Resume</h2>
+    <a href="SAI-AI-.pdf" class="cta-button" target="_blank">Download Resume (PDF)</a>
+  </div>
 </div>
 
 <footer>
