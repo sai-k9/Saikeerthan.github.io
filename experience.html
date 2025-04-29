@@ -16,26 +16,46 @@
       flex-direction: column;
     }
     .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: transparent;
-      z-index: 100;
-    }
-    .nav-left a, .nav-right a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-      margin-left: 20px;
-      transition: color 0.3s;
-    }
-    .nav-left a:hover, .nav-right a:hover {
-      color: #4CAF50;
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.nav-left a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.nav-right {
+  display: flex;
+  gap: 30px;
+  margin-right: 10px;
+  flex-wrap: wrap; /* ✅ allows items to break if screen is small */
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: color 0.3s;
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+  color: #4CAF50;
+}
+
     .container {
       flex: 1;
       display: flex;
