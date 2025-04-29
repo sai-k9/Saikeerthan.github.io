@@ -16,96 +16,68 @@
       flex-direction: column;
     }
     .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: transparent;
-  z-index: 100;
-  box-sizing: border-box;
-}
-
-.nav-left a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: color 0.3s;
-}
-
-.nav-right {
-  display: flex;
-  gap: 30px;
-  margin-right: 10px;
-  flex-wrap: wrap; /* ✅ allows items to break if screen is small */
-}
-
-.nav-right a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  font-size: 1.05rem;
-  transition: color 0.3s;
-}
-
-.nav-left a:hover,
-.nav-right a:hover {
-  color: #4CAF50;
-}
-
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 40px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: transparent;
+      backdrop-filter: none;
+      box-shadow: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      transition: top 0.3s ease-in-out;
+      z-index: 1000;
+      box-sizing: border-box;
+    }
+    .nav-left a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    .nav-right {
+      display: flex;
+      gap: 30px;
+      margin-right: 10px;
+      flex-wrap: wrap;
+    }
+    .nav-right a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+    .nav-left a:hover, .nav-right a:hover {
+      color: #4CAF50;
+    }
     .container {
       flex: 1;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      padding: 140px 20px 60px;
+      padding: 100px 20px 60px;
       animation: fadeIn 1.2s ease-out;
     }
     @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px);}
-      100% { opacity: 1; transform: translateY(0);}
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
     .content {
-      max-width: 1000px;
-      text-align: center;
+      max-width: 900px;
+      text-align: left;
     }
     h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-bottom: 20px;
-      transition: color 0.3s;
-    }
-    h1:hover {
       color: #4CAF50;
     }
     ul {
-      text-align: left;
-      margin: 0 auto;
-      max-width: 600px;
-    }
-    ul li {
-      margin-bottom: 10px;
-      line-height: 1.6;
       font-size: 1.05rem;
-    }
-    .social-icons {
-      margin-top: 40px;
-    }
-    .social-icons a {
-      margin: 0 10px;
-      display: inline-block;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .social-icons a:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-    .social-icons img {
-      width: 28px;
-      height: 28px;
+      line-height: 1.6;
+      padding-left: 20px;
     }
     footer {
       text-align: center;
@@ -116,7 +88,6 @@
   </style>
 </head>
 <body>
-
 <div class="navbar">
   <div class="nav-left">
     <a href="index.html">Home</a>
@@ -133,19 +104,9 @@
   <div class="content">
     <h1>Experience</h1>
     <ul>
-      <li>Prompt Engineer Intern – Conflux Systems (Jan 2025 – Present)</li>
-      <li>Software Engineer – Cognizant (July 2019 – Aug 2022)</li>
-      <li>Worked on Autonomous Vehicles lane marking validation projects using ML annotation tools.</li>
-      <li>Specialized in LLM Prompt Engineering: Few-shot, Zero-shot, Chain-of-Thought prompting techniques.</li>
-      <li>Built and optimized AI-driven workflows, enterprise chatbots, and automation pipelines.</li>
+      <li>Prompt Engineer Intern at Conflux Systems (Jan 2025 – Present)</li>
+      <li>Software Engineer at Cognizant (July 2019 – August 2022)</li>
     </ul>
-
-    <div class="social-icons">
-      <a href="https://github.com/sai-k9" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"></a>
-      <a href="https://www.linkedin.com/in/sai-keerthan-0a4a50313/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
-      <a href="mailto:medavarapusaikeerthan@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email"></a>
-      <a href="tel:+1234567890" title="Call Me"><img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone"></a>
-    </div>
   </div>
 </div>
 
@@ -153,5 +114,19 @@
   <p>© 2025 Sai Keerthan M</p>
 </footer>
 
+<script>
+  let prevScrollPos = window.pageYOffset;
+  const navbar = document.querySelector('.navbar');
+
+  window.onscroll = function () {
+    const currentScrollPos = window.pageYOffset;
+    if (prevScrollPos > currentScrollPos) {
+      navbar.style.top = "0";
+    } else {
+      navbar.style.top = "-80px";
+    }
+    prevScrollPos = currentScrollPos;
+  };
+</script>
 </body>
 </html>
