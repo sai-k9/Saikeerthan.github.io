@@ -5,61 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | Sai Keerthan</title>
   <style>
-    body, html {
+    html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
       font-family: 'Poppins', sans-serif;
       background: #f7f7f7;
       color: #333;
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
     .container {
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 60px 20px 40px;
+    }
+    .content {
+      max-width: 800px;
       text-align: center;
     }
-    header {
-      background: #4CAF50;
-      padding: 20px;
-      color: white;
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 1.4rem;
+      color: #666;
+      margin-bottom: 40px;
     }
     section {
-      padding: 60px 20px;
-      max-width: 800px;
-      margin: auto;
       text-align: left;
+      margin-top: 20px;
     }
     h3 {
       color: #4CAF50;
       margin-top: 30px;
     }
     footer {
-      background: #f7f7f7;
-      color: #666;
-      font-size: 0.8rem;
-      padding: 15px;
       text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      color: #666;
+      background-color: transparent;
     }
   </style>
 </head>
 <body>
 
 <div class="container">
-  <header>
+  <div class="content">
     <h1>Projects</h1>
-  </header>
+    <h2>Selected Works & Research</h2>
+    <section>
+      <h3>Facial Emotion Tracking System Using AI</h3>
+      <p>Built a real-time emotion tracking application using MediaPipe, OpenCV, Matplotlib, and pyttsx3.</p>
 
-  <section>
-    <h3>Facial Emotion Tracking System Using AI</h3>
-    <p>Built a real-time emotion tracking app using MediaPipe, OpenCV, Matplotlib, and pyttsx3.</p>
+      <h3>ResumeBuddy – LLM-Based Resume Builder</h3>
+      <p>Developed an AI chatbot using GPT-4 to generate tailored, ATS-optimized resumes based on job descriptions.</p>
 
-    <h3>ResumeBuddy – LLM-Based Resume Builder</h3>
-    <p>Developed a GPT-4 powered chatbot that generates customized, ATS-friendly resumes dynamically.</p>
-
-    <h3>Research Paper: Human-Computer Interactions Using AI</h3>
-    <p>Published a paper enhancing human-computer interaction using LLM-based conversational systems and accessibility tools.</p>
-  </section>
+      <h3>Research Paper: Human-Computer Interactions Using AI</h3>
+      <p>Published research on enhancing HCI using conversational AI and LLM-driven assistive technologies.</p>
+    </section>
+  </div>
 </div>
 
 <footer>
