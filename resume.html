@@ -15,46 +15,42 @@
       display: flex;
       flex-direction: column;
     }
-   .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: transparent;
-  z-index: 100;
-  box-sizing: border-box;
-}
-
-.nav-left a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: color 0.3s;
-}
-
-.nav-right {
-  display: flex;
-  gap: 30px;
-  margin-right: 10px;
-  flex-wrap: wrap; /* ✅ allows items to break if screen is small */
-}
-
-.nav-right a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  font-size: 1.05rem;
-  transition: color 0.3s;
-}
-
-.nav-left a:hover,
-.nav-right a:hover {
-  color: #4CAF50;
-
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 40px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: top 0.3s ease-in-out;
+      z-index: 1000;
+      box-sizing: border-box;
+    }
+    .nav-left a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    .nav-right {
+      display: flex;
+      gap: 30px;
+      margin-right: 10px;
+      flex-wrap: wrap;
+    }
+    .nav-right a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+    .nav-left a:hover, .nav-right a:hover {
+      color: #4CAF50;
     }
     .container {
       flex: 1;
@@ -196,5 +192,20 @@
 <footer>
   <p>© 2025 Sai Keerthan M</p>
 </footer>
+
+<script>
+  let prevScrollPos = window.pageYOffset;
+  const navbar = document.querySelector('.navbar');
+
+  window.onscroll = function () {
+    const currentScrollPos = window.pageYOffset;
+    if (prevScrollPos > currentScrollPos) {
+      navbar.style.top = "0";
+    } else {
+      navbar.style.top = "-80px";
+    }
+    prevScrollPos = currentScrollPos;
+  };
+</script>
 </body>
 </html>
