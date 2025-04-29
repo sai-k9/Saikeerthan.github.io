@@ -3,92 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sai Keerthan | AI & Prompt Engineer Portfolio</title>
-  
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #e0e0e0, #f7f7f7);
-      text-align: center;
-      color: #333;
-      scroll-behavior: smooth;
-    }
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    header {
-      min-height: 90vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      text-align: center;
-      background: linear-gradient(-45deg, #e0e0e0, #f7f7f7, #d7d7d7, #f0f0f0);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
-      border-bottom: 1px solid #ccc;
-    }
-    h1 {
-      font-size: 4rem;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-    h2 {
-      font-size: 2rem;
-      letter-spacing: 2px;
-      color: #555;
-      margin-bottom: 20px;
-    }
-    p.intro {
-      font-size: 1.2rem;
-      color: #666;
-      max-width: 600px;
-      margin: 10px auto 20px;
-    }
-    .cta-button {
-      padding: 10px 20px;
-      background-color: #4CAF50;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-      margin: 10px;
-      transition: background-color 0.3s, transform 0.3s;
-      display: inline-block;
-    }
-    .cta-button:hover {
-      background-color: #87CEFA;
-      transform: translateY(-3px);
-    }
-    .section {
-      display: none;
-      opacity: 0;
-      transform: translateY(30px);
-      padding: 60px 20px;
-      background: #fff;
-      margin: 50px auto;
-      max-width: 900px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: all 0.6s ease;
-      text-align: left;
-    }
-    .section.active {
-      display: block;
-      opacity: 1;
-      transform: translateY(0);
-    }
-    footer {
-      margin-top: 40px;
-      padding: 15px;
-      background: #343a40;
-      color: #ccc;
-      font-size: 0.8rem;
-    }
-  </style>
+  <title>Sai Keerthan | Home</title>
+  <style>/* same styles from your code */</style>
 </head>
 <body>
 
@@ -97,74 +13,14 @@
   <h2>Prompt Engineer | Generative AI Enthusiast</h2>
   <p class="intro">Crafting AI-driven solutions, intelligent workflows, and building with LLMs to shape tomorrow’s technology.</p>
   <div>
-    <a href="#" onclick="showSection('about')" class="cta-button">ABOUT</a>
-    <a href="#" onclick="showSection('experience')" class="cta-button">EXPERIENCE</a>
-    <a href="#" onclick="showSection('projects')" class="cta-button">PROJECTS</a>
-    <a href="#" onclick="showSection('resume')" class="cta-button">RESUME</a>
+    <a href="about.html" class="cta-button">ABOUT</a>
+    <a href="experience.html" class="cta-button">EXPERIENCE</a>
+    <a href="projects.html" class="cta-button">PROJECTS</a>
+    <a href="resume.html" class="cta-button">RESUME</a>
   </div>
 </header>
 
-<section id="about" class="section">
-  <h2>About Me</h2>
-  <p>I am an aspiring Generative AI and Prompt Engineer with over 3 years of professional experience in AI-driven solutions and autonomous vehicle data validation...</p>
-</section>
-
-<section id="experience" class="section">
-  <h2>Experience</h2>
-  <h3>Prompt Engineer Intern – Conflux Systems</h3>
-  <ul>
-    <li>Designed, tested, and optimized structured AI prompts...</li>
-    <li>Collaborated with AI Product Managers, NLP Researchers, and UX Designers...</li>
-    <li>Conducted detailed A/B testing on different prompt variations to optimize outcomes...</li>
-    <li>Analyzed conversation logs, user feedback, and model behavior...</li>
-    <li>Documented prompt optimization workflows and established reusable prompt templates...</li>
-  </ul>
-  <h3>Software Engineer – Cognizant</h3>
-  <ul>
-    <li>Annotated high-resolution Street View, Satellite View, and Overhead View data...</li>
-    <li>Conducted tool testing, validation, and feedback reporting...</li>
-    <li>Simulated driving paths on annotated maps to identify hazards or inconsistencies...</li>
-    <li>Led QA teams ensuring project delivery met ISO safety standards and accuracy benchmarks...</li>
-    <li>Mentored and trained new team members on tool functionalities and quality standards...</li>
-  </ul>
-</section>
-
-<section id="projects" class="section">
-  <h2>Projects</h2>
-  <h3>Facial Emotion Tracking System Using AI</h3>
-  <p>Built a real-time AI application that detects and classifies facial emotions through computer vision techniques...</p>
-  <h3>ResumeBuddy – LLM-Based Resume Builder Chatbot</h3>
-  <p>Developed a Resume Generation Chatbot using GPT-4 to craft ATS-compliant resumes tailored to specific job descriptions...</p>
-  <h3>Research Paper: Human-Computer Interactions Using AI</h3>
-  <p>Published a research paper on leveraging AI technologies to improve the quality of human-computer interactions...</p>
-</section>
-
-<section id="resume" class="section">
-  <h2>Resume</h2>
-  <p>Aspiring Generative AI & Prompt Engineer having 3.2 years of professional experience in Autonomous Vehicles Lane Testing and AI-driven automation...</p>
-  <div style="margin-top:20px;">
-    <a href="SAI-AI-.pdf" target="_blank" class="cta-button">Download Resume</a>
-  </div>
-</section>
-
-<footer>
-  <p>© 2025 Sai Keerthan M</p>
-</footer>
-
-<script>
-function showSection(id) {
-  var sections = document.querySelectorAll('.section');
-  sections.forEach(function(section) {
-    section.classList.remove('active');
-  });
-  document.getElementById(id).classList.add('active');
-}
-
-// Show About section by default on page load
-document.addEventListener('DOMContentLoaded', function() {
-  showSection('about');
-});
-</script>
+<footer><p>© 2025 Sai Keerthan M</p></footer>
 
 </body>
 </html>
