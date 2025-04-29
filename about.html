@@ -5,50 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Sai Keerthan</title>
   <style>
-    body, html {
+    html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
       font-family: 'Poppins', sans-serif;
       background: #f7f7f7;
       color: #333;
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
     .container {
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 60px 20px 40px;
+    }
+    .content {
+      max-width: 800px;
       text-align: center;
     }
-    header {
-      background: #4CAF50;
-      padding: 20px;
-      color: white;
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
     }
-    section {
-      padding: 60px 20px;
-      max-width: 800px;
-      margin: auto;
+    h2 {
+      font-size: 1.4rem;
+      color: #666;
+      margin-bottom: 40px;
+    }
+    p {
       text-align: left;
+      line-height: 1.6;
     }
     footer {
-      background: #f7f7f7;
-      color: #666;
-      font-size: 0.8rem;
-      padding: 15px;
       text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      color: #666;
+      background-color: transparent;
     }
   </style>
 </head>
 <body>
 
 <div class="container">
-  <header>
+  <div class="content">
     <h1>About Me</h1>
-  </header>
-
-  <section>
-    <p>I am an aspiring Generative AI and Prompt Engineer with over 3 years of professional experience in AI-driven solutions and autonomous vehicle data validation. I specialize in designing intelligent prompt strategies, automating workflows using LLMs, and building real-world AI tools for productivity and creativity.</p>
-  </section>
+    <h2>Generative AI and Prompt Engineering Enthusiast</h2>
+    <p>I am an aspiring Generative AI and Prompt Engineer with 3+ years of professional experience in AI-driven solutions and autonomous vehicle data validation. Specialized in crafting intelligent prompts, building real-world AI applications, and deploying LLMs using no-code and low-code tools.</p>
+  </div>
 </div>
 
 <footer>
