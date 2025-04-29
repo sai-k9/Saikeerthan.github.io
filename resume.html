@@ -15,62 +15,166 @@
       display: flex;
       flex-direction: column;
     }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: transparent;
+      z-index: 100;
+    }
+    .nav-left a, .nav-right a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      margin-left: 20px;
+      transition: color 0.3s;
+    }
+    .nav-left a:hover, .nav-right a:hover {
+      color: #4CAF50;
+    }
     .container {
       flex: 1;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
-      padding: 60px 20px 40px;
+      padding: 140px 20px 60px;
+      animation: fadeIn 1.2s ease-out;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
     .content {
-      max-width: 800px;
+      max-width: 1000px;
       text-align: center;
     }
     h1 {
       font-size: 3rem;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
+      transition: color 0.3s;
     }
-    h2 {
-      font-size: 1.4rem;
-      color: #666;
-      margin-bottom: 40px;
+    h1:hover {
+      color: #4CAF50;
     }
-    .cta-button {
+    .resume-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 30px;
+      max-width: 800px;
+      margin: 30px auto;
+      text-align: left;
+    }
+    .resume-card h2 {
+      margin-top: 20px;
+      color: #4CAF50;
+    }
+    .resume-card ul {
+      padding-left: 20px;
+    }
+    .download-button {
+      display: inline-block;
+      margin-top: 20px;
       padding: 12px 24px;
       background-color: #4CAF50;
       color: white;
       text-decoration: none;
-      border-radius: 5px;
-      margin-top: 20px;
-      display: inline-block;
-      transition: background-color 0.3s;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
     }
-    .cta-button:hover {
-      background-color: #45a049;
+    .download-button:hover {
+      background-color: #3e8e41;
+    }
+    .social-icons {
+      margin-top: 40px;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      display: inline-block;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .social-icons a:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    .social-icons img {
+      width: 28px;
+      height: 28px;
     }
     footer {
       text-align: center;
       padding: 15px;
       font-size: 0.9rem;
       color: #666;
-      background-color: transparent;
     }
   </style>
 </head>
 <body>
+<div class="navbar">
+  <div class="nav-left">
+    <a href="index.html">Home</a>
+  </div>
+  <div class="nav-right">
+    <a href="about.html">About</a>
+    <a href="experience.html">Experience</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+  </div>
+</div>
 
 <div class="container">
   <div class="content">
     <h1>Resume</h1>
-    <h2>Download My Latest Professional Resume</h2>
-    <a href="SAI-AI-.pdf" class="cta-button" target="_blank">Download Resume (PDF)</a>
+    <div class="resume-card">
+      <h2>Professional Summary</h2>
+      <p>Aspiring Generative AI & Prompt Engineer with 3.2 years of professional experience in AI-driven solutions and Autonomous Vehicle data testing.</p>
+
+      <h2>Experience</h2>
+      <ul>
+        <li>Prompt Engineer Intern – Conflux Systems (Jan 2025 – Present)</li>
+        <li>Software Engineer – Cognizant (July 2019 – August 2022)</li>
+      </ul>
+
+      <h2>Technical Skills</h2>
+      <ul>
+        <li>AI Tools: OpenAI, Gemini, LangChain, Firebase Studio</li>
+        <li>Prompting: Zero-shot, Few-shot, Chain-of-Thought</li>
+        <li>Languages: Python, SQL</li>
+        <li>Tools: Jira, ServiceNow</li>
+      </ul>
+
+      <h2>Projects</h2>
+      <ul>
+        <li>Facial Emotion Tracking using AI & Voice Feedback</li>
+        <li>ResumeBuddy GPT-powered Resume Generator</li>
+      </ul>
+
+      <h2>Education</h2>
+      <ul>
+        <li>Master’s in Computer Science – Rivier University</li>
+        <li>Bachelor’s in Computer Science – Kakatiya University</li>
+      </ul>
+
+      <a href="SAI-AI-.pdf" download class="download-button">Download Resume (PDF)</a>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://github.com/sai-k9" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/sai-keerthan-0a4a50313/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
+      <a href="mailto:medavarapusaikeerthan@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email"></a>
+      <a href="tel:+1234567890" title="Call Me"><img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone"></a>
+    </div>
   </div>
 </div>
 
 <footer>
   <p>© 2025 Sai Keerthan M</p>
 </footer>
-
 </body>
 </html>
