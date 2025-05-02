@@ -24,31 +24,19 @@
       top: 0;
       width: 100%;
       background: transparent;
-      backdrop-filter: none;
-      box-shadow: none;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-      transition: top 0.3s ease-in-out;
       z-index: 1000;
-      box-sizing: border-box;
     }
-    .nav-left a {
+    .nav-left a, .nav-right a {
       text-decoration: none;
       color: #111;
       font-weight: 600;
-      font-size: 1.1rem;
+      font-size: 1rem;
+      margin: 0 10px;
     }
     .nav-right {
       display: flex;
       gap: 30px;
-      margin-right: 10px;
-      flex-wrap: wrap;
-    }
-    .nav-right a {
-      text-decoration: none;
-      color: #111;
-      font-weight: 500;
-      font-size: 1rem;
-      transition: color 0.3s;
     }
     .nav-left a:hover, .nav-right a:hover {
       color: #4CAF50;
@@ -86,7 +74,6 @@
       line-height: 1.6;
     }
     .download-button {
-      margin-bottom: 30px;
       display: inline-block;
       padding: 10px 20px;
       background-color: #4CAF50;
@@ -99,12 +86,7 @@
     .download-button:hover {
       background-color: #3e8e41;
     }
-    
-        .social-icons a:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
-        footer {
+    footer {
       text-align: center;
       padding: 15px;
       font-size: 0.9rem;
@@ -113,74 +95,91 @@
   </style>
 </head>
 <body>
-<div class="navbar">
-  <div class="nav-left">
-    <a href="index.html">Home</a>
+  <div class="navbar">
+    <div class="nav-left">
+      <a href="index.html">Home</a>
+    </div>
+    <div class="nav-right">
+      <a href="about.html">About</a>
+      <a href="experience.html">Experience</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+    </div>
   </div>
-  <div class="nav-right">
-    <a href="about.html">About</a>
-    <a href="experience.html">Experience</a>
-    <a href="projects.html">Projects</a>
-    <a href="resume.html">Resume</a>
+
+  <div class="container">
+    <div class="content">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 30px;">
+        <h1 style="margin: 0;">Resume</h1>
+        <a href="SAI-AI-.pdf" download class="download-button">Download Resume (PDF)</a>
+      </div>
+
+      <h2>Professional Summary</h2>
+      <p>Aspiring Generative AI & Prompt Engineer having 3.2 years of professional experience in working and testing of Autonomous vehicles and its algorithms, now pivoting towards AI-driven solutions and Large Language Models. Hands-on experience in No-Code tools, building Chatbots, Crafting Prompts. Interested in NLP and AI Automation.</p>
+
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>Prompt Engineer Intern – Conflux Systems (Jan 2025 – Present)</strong>
+          <ul>
+            <li>Developed AI prompts to enhance chatbot response accuracy, consistency, and conversational flow.</li>
+            <li>Collaborated with product managers and AI teams to align chatbot behavior and objectives.</li>
+            <li>Conducted A/B testing experiments to evaluate prompt effectiveness across different chatbot scenarios.</li>
+            <li>Created structured documentation for prompt strategies, dialogue workflows, and conversational standards.</li>
+            <li>Analyzed chatbot interaction data to refine prompts and boost user engagement outcomes.</li>
+          </ul>
+        </li>
+        <li><strong>Software Engineer – Cognizant (July 2019 – August 2022)</strong>
+          <ul>
+            <li>Utilized advanced lane marking tools like Crowd Compute and Data Compute for autonomous vehicles using ML algorithms.</li>
+            <li>Accurately marked lanes using Street View, Satellite, and Overhead imagery.</li>
+            <li>Performed tool testing and validation, and provided improvement feedback.</li>
+            <li>Simulated driving paths to identify labeling hazards and inconsistencies.</li>
+            <li>Mentored new QA team members on marking tools and quality standards.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Technical Skills</h2>
+      <ul>
+        <li><strong>AI & LLM Tools:</strong> OpenAI, Gemini, Deep Seek, Bolt.New, Same.new, Firebase Studio, Cursor, Runway ML, Canva, Midjourney, NotebookLM, Kling AI, Luma AI, Stable Diffusion, Eleven Labs, Napkin.ai, DALLE, Sora</li>
+        <li><strong>Prompting Techniques:</strong> Mega, Meta, Zero-shot, Few-shot, Chain of Thought, Tree of Thought</li>
+        <li><strong>Development:</strong> Python, LangChain, SQL, Machine Learning, ServiceNow, Jira</li>
+        <li><strong>Soft Skills:</strong> User-Focused Design, Problem Solving, Adaptability, Fast Learner, Leadership</li>
+      </ul>
+
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Facial Emotion Tracking System Using AI</strong>
+          <p>Built a real-time AI application to detect facial emotions via webcam, with mood scoring and visualization. Used MediaPipe, OpenCV, Matplotlib, and pyttsx3 for voice feedback.</p>
+        </li>
+        <li><strong>ResumeBuddy – LLM Resume Builder Chatbot</strong>
+          <p>Developed an AI chatbot to generate tailored, ATS-compliant resumes using OpenAI, job-matching logic, and humanized bullet points through prompt optimization.</p>
+        </li>
+        <li><strong>Research Paper – Human-Computer Interaction Using AI</strong>
+          <p>Published research focused on NLP, conversational AI, and inclusive UI design to enhance accessibility and real-world HCI scenarios.</p>
+        </li>
+      </ul>
+
+      <h2>Education</h2>
+      <ul>
+        <li><strong>Master’s in Computer Science</strong><br>Rivier University, January 2024<br>GPA: 3.5 / 4.0</li>
+        <li><strong>Bachelor’s in Computer Science</strong><br>Kakatiya University, May 2019<br>GPA: 7.0 / 10</li>
+      </ul>
+    </div>
   </div>
-</div>
 
-<div class="container">
-  <div class="content">
-    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 30px;">
-  <h1 style="margin: 0;">Resume</h1>
-  <a href="SAI-AI-.pdf" download class="download-button">Download Resume (PDF)</a>
-</div>
+  <footer>
+    <p>© 2025 Sai Keerthan M</p>
+  </footer>
 
-    <h2>Professional Summary</h2>
-    <p>Aspiring Generative AI & Prompt Engineer with 3.2 years of professional experience in AI-driven solutions and Autonomous Vehicle data testing.</p>
-
-    <h2>Experience</h2>
-    <ul>
-      <li>Prompt Engineer Intern – Conflux Systems (Jan 2025 – Present)</li>
-      <li>Software Engineer – Cognizant (July 2019 – August 2022)</li>
-    </ul>
-
-    <h2>Technical Skills</h2>
-    <ul>
-      <li>AI Tools: OpenAI, Gemini, LangChain, Firebase Studio</li>
-      <li>Prompting: Zero-shot, Few-shot, Chain-of-Thought</li>
-      <li>Languages: Python, SQL</li>
-      <li>Tools: Jira, ServiceNow</li>
-    </ul>
-
-    <h2>Projects</h2>
-    <ul>
-      <li>Facial Emotion Tracking using AI & Voice Feedback</li>
-      <li>ResumeBuddy GPT-powered Resume Generator</li>
-    </ul>
-
-    <h2>Education</h2>
-    <ul>
-      <li>Master’s in Computer Science – Rivier University</li>
-      <li>Bachelor’s in Computer Science – Kakatiya University</li>
-    </ul>
-
-    
-  </div>
-</div>
-
-<footer>
-  <p>© 2025 Sai Keerthan M</p>
-</footer>
-
-<script>
-  let prevScrollPos = window.pageYOffset;
-  const navbar = document.querySelector('.navbar');
-  window.onscroll = function () {
-    const currentScrollPos = window.pageYOffset;
-    if (prevScrollPos > currentScrollPos) {
-      navbar.style.top = "0";
-    } else {
-      navbar.style.top = "-80px";
-    }
-    prevScrollPos = currentScrollPos;
-  };
-</script>
+  <script>
+    let prevScrollPos = window.pageYOffset;
+    const navbar = document.querySelector('.navbar');
+    window.onscroll = function () {
+      const currentScrollPos = window.pageYOffset;
+      navbar.style.top = prevScrollPos > currentScrollPos ? \"0\" : \"-80px\";
+      prevScrollPos = currentScrollPos;
+    };
+  </script>
 </body>
 </html>
