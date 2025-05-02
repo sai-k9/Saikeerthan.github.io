@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Experience | Sai Keerthan</title>
   <style>
@@ -15,6 +15,7 @@
       display: flex;
       flex-direction: column;
     }
+
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -24,25 +25,27 @@
       top: 0;
       width: 100%;
       background: transparent;
-      backdrop-filter: none;
       box-shadow: none;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       transition: top 0.3s ease-in-out;
       z-index: 1000;
       box-sizing: border-box;
     }
+
     .nav-left a {
       text-decoration: none;
       color: #111;
       font-weight: 600;
       font-size: 1.1rem;
     }
+
     .nav-right {
       display: flex;
       gap: 30px;
       margin-right: 10px;
       flex-wrap: wrap;
     }
+
     .nav-right a {
       text-decoration: none;
       color: #111;
@@ -50,9 +53,11 @@
       font-size: 1rem;
       transition: color 0.3s;
     }
+
     .nav-left a:hover, .nav-right a:hover {
       color: #4CAF50;
     }
+
     .container {
       flex: 1;
       display: flex;
@@ -61,40 +66,73 @@
       padding: 100px 20px 60px;
       animation: fadeIn 1.2s ease-out;
     }
+
     @keyframes fadeIn {
       0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
     }
+
     .content {
       max-width: 900px;
       text-align: left;
     }
+
     h1 {
       font-size: 2.5rem;
       margin-bottom: 20px;
       color: #4CAF50;
     }
+
     h2 {
       margin-top: 30px;
       font-size: 1.4rem;
       color: #222;
     }
+
     h3 {
       margin: 4px 0 10px;
       font-size: 1.05rem;
       font-weight: normal;
       color: #666;
     }
+
     p {
       font-size: 1.05rem;
       line-height: 1.6;
       margin-bottom: 14px;
     }
+
     footer {
       text-align: center;
       padding: 15px;
       font-size: 0.9rem;
       color: #666;
+    }
+
+    /* Responsive Fix */
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px 20px;
+      }
+
+      .nav-right {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 12px;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .nav-left a, .nav-right a {
+        font-size: 1rem;
+      }
+
+      .container {
+        padding-top: 140px;
+      }
     }
   </style>
 </head>
@@ -147,7 +185,7 @@
 
   window.onscroll = function () {
     const currentScrollPos = window.pageYOffset;
-    if (prevScrollPos > currentScrollPos) {
+    if (prevScrollPos > currentScrollPos || currentScrollPos === 0) {
       navbar.style.top = "0";
     } else {
       navbar.style.top = "-80px";
@@ -155,5 +193,6 @@
     prevScrollPos = currentScrollPos;
   };
 </script>
+
 </body>
 </html>
