@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Sai Keerthan</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
       font-family: 'Poppins', sans-serif;
       background: #f7f7f7;
       color: #333;
-      display: flex;
-      flex-direction: column;
     }
     .navbar {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
-      padding: 16px 40px;
+      padding: 16px 20px;
       position: fixed;
       top: 0;
       width: 100%;
-      background: transparent;
-      backdrop-filter: none;
-      box-shadow: none;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-      transition: top 0.3s ease-in-out;
       z-index: 1000;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       box-sizing: border-box;
+    }
+    .nav-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1000px;
+      flex-wrap: wrap;
     }
     .nav-left a {
       text-decoration: none;
@@ -39,9 +40,9 @@
     }
     .nav-right {
       display: flex;
-      gap: 30px;
-      margin-right: 10px;
+      gap: 20px;
       flex-wrap: wrap;
+      margin-top: 10px;
     }
     .nav-right a {
       text-decoration: none;
@@ -53,44 +54,87 @@
     .nav-left a:hover, .nav-right a:hover {
       color: #4CAF50;
     }
+
     .container {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 100px 20px 60px;
+      max-width: 900px;
+      margin: 140px auto 60px;
+      padding: 0 20px;
       animation: fadeIn 1.2s ease-out;
     }
+
     @keyframes fadeIn {
       0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
     }
-    .content {
-      max-width: 900px;
-      text-align: left;
-    }
+
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       margin-bottom: 20px;
       color: #4CAF50;
+      text-align: center;
     }
+
     p {
-      font-size: 1.05rem;
+      font-size: 1rem;
       line-height: 1.6;
+      margin-bottom: 16px;
     }
+
     footer {
       text-align: center;
       padding: 15px;
       font-size: 0.9rem;
       color: #666;
     }
+
+    @media (max-width: 600px) {
+      .nav-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-right {
+        margin-top: 10px;
+        justify-content: flex-start;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 0.95rem;
+      }
+    }
   </style>
 </head>
 <body>
-<div class="navbar">
-  <div class="nav-left">
-    <a href="index.html">Home</a>
+  <div class="navbar">
+    <div class="nav-row">
+      <div class="nav-left">
+        <a href="index.html">Home</a>
+      </div>
+      <div class="nav-right">
+        <a href="about.html">About</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+      </div>
+    </div>
   </div>
-  <div class="nav-right">
-    <a href="about.html">About</a>
-    <a href="experience.html">Experience</a>
+
+  <div class="container">
+    <h1>About Me</h1>
+    <p>Hi, I'm <strong>Sai Keerthan M</strong>, a passionate Prompt Engineer and Generative AI enthusiast with over 3 years of professional experience in software engineering, AI tool development, and autonomous systems. I hold a Master’s degree in Computer Science from <strong>Rivier University</strong> and a Bachelor’s from <strong>Kakatiya University</strong>.</p>
+
+    <p>I started my career at <strong>Cognizant</strong>, where I worked on testing and validating ML-based lane detection systems for autonomous vehicles. My work involved high-accuracy annotation across various visual formats, tool validation, and mentoring new team members.</p>
+
+    <p>Driven by a deep interest in AI automation and NLP, I transitioned into the Generative AI space. At <strong>Conflux Systems</strong>, I’ve been developing prompt strategies, enhancing chatbot accuracy, and leading A/B tests to improve LLM-driven conversational systems. My core expertise lies in LLM prompting techniques like Chain-of-Thought, Zero-shot, and Mega prompting, along with tools like OpenAI, LangChain, and Bolt.ai.</p>
+
+    <p>Notable projects include <strong>ResumeBuddy</strong>, a resume-generating chatbot with 95% job-matching accuracy, and a real-time facial emotion tracking system using OpenCV and MediaPipe. I also authored a research paper on <strong>Human-Computer Interaction using AI</strong>, focusing on smart assistants and contextual communication.</p>
+
+    <p>I actively explore tools like <strong>Gemini, DALLE, Midjourney, Stable Diffusion, and Eleven Labs</strong> to bring creative and intelligent solutions to life. I'm always eager to collaborate on projects that blend human-centered design with cutting-edge AI.</p>
+  </div>
+
+  <footer>
+    <p>© 2025 Sai Keerthan M</p>
+  </footer>
+</body>
+</html>
