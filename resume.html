@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Resume | Sai Keerthan</title>
   <style>
     html, body {
@@ -24,15 +24,14 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: transparent;
-      box-shadow: none;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-      transition: top 0.3s ease-in-out;
       z-index: 1000;
       box-sizing: border-box;
     }
 
-    .nav-left a {
+    .nav-left a, .nav-right a {
       text-decoration: none;
       color: #111;
       font-weight: 600;
@@ -42,16 +41,7 @@
     .nav-right {
       display: flex;
       gap: 30px;
-      margin-right: 10px;
       flex-wrap: wrap;
-    }
-
-    .nav-right a {
-      text-decoration: none;
-      color: #111;
-      font-weight: 500;
-      font-size: 1rem;
-      transition: color 0.3s;
     }
 
     .nav-left a:hover, .nav-right a:hover {
@@ -121,7 +111,6 @@
       color: #666;
     }
 
-    /* Mobile adjustments */
     @media (max-width: 600px) {
       .navbar {
         flex-direction: column;
@@ -131,15 +120,10 @@
 
       .nav-right {
         flex-direction: row;
-        flex-wrap: wrap;
         justify-content: flex-start;
         gap: 12px;
         width: 100%;
         margin-top: 10px;
-      }
-
-      .nav-left a, .nav-right a {
-        font-size: 1rem;
       }
 
       .container {
@@ -171,53 +155,41 @@
       </div>
 
       <h2>Professional Summary</h2>
-      <p>Aspiring Generative AI & Prompt Engineer having 3+ years of professional experience...</p>
+      <p>Aspiring Generative AI & Prompt Engineer having 3+ years of professional experience in software development and AI-driven automation tools, with a strong focus on LLMs, custom GPTs, and user-centric AI applications.</p>
 
       <h2>Professional Experience</h2>
       <ul>
         <li><strong>Prompt Engineer Intern – Conflux Systems (Jan 2025 – Present)</strong>
           <ul>
             <li>Developed AI prompts to enhance chatbot response accuracy, consistency, and conversational flow.</li>
-            <li>Collaborated with product managers and AI teams to align chatbot behavior and objectives.</li>
-            <li>Conducted A/B testing experiments to evaluate prompt effectiveness across different chatbot scenarios.</li>
-            <li>Created structured documentation for prompt strategies, dialogue workflows, and conversational standards.</li>
-            <li>Analyzed chatbot interaction data to refine prompts and boost user engagement outcomes.</li>
+            <li>Conducted A/B testing to refine prompt efficiency across various NLP use cases.</li>
           </ul>
         </li>
         <li><strong>Software Engineer – Cognizant (July 2019 – August 2022)</strong>
           <ul>
-            <li>Experienced in utilizing the advanced lane marking tools like Crowd Compute and Data Compute...</li>
-            <li>Experienced in Marking lanes across Street view, Overhead view & Satellite Imagery with high accuracy.</li>
-            <li>Conducted existing tool Testing, Validation & Reviewed new tool features and provided detailed feedback.</li>
-            <li>Used internal visualization tools to simulate driving paths and identify the hazards in labeled data.</li>
-            <li>Provided training and mentorship for new team members on marking the lanes and quality benchmarks.</li>
+            <li>Worked on lane marking validation for autonomous vehicle data systems using AI-enhanced tools.</li>
+            <li>Collaborated on internal QA tools for simulation and visualization of lane-level accuracy.</li>
           </ul>
         </li>
-      </ul>
-
-      <h2>Technical Skills</h2>
-      <ul>
-        <li><strong>AI & LLM TOOLS:</strong> Open AI, Gemini, Deep seek, Bolt.New, Same.new, Google Firebase Studio, Cursor, Runway ML, Canva, Midjourney, NotebookLM, Kling AI, Luma AI, Stable Diffusion, Eleven Labs, Napkin.ai, DALLE, Sora.</li>
-        <li><strong>Prompting Techniques:</strong> Mega, Meta, Zero-shot, Few Shot, Chain of Thought, Tree of Thought prompting.</li>
-        <li><strong>Development:</strong> Python, Lang Chain, SQL, Machine Learning, ServiceNow, Jira</li>
-        <li><strong>Soft Skills:</strong> User-Focused design, Problem Solving, Adaptability, Fast Learner, Leadership</li>
       </ul>
 
       <h2>Projects</h2>
       <ul>
         <li><strong>Facial Emotion Tracking System Using AI</strong><br>
-          Designed & developed a real time AI application which detects facial emotions using webcam and maps them to mood scores...
+          Developed a real-time application to detect facial emotions using webcam input and visualize daily mood trends using AI and computer vision techniques.
         </li>
         <li><strong>ResumeBuddy – LLM-Based Resume Builder Chatbot</strong><br>
-          Designed & developed a custom chatbot for preparing resumes based on job descriptions with 95% accuracy and ATS friendliness...
+          Built a GPT-powered resume builder that analyzes job descriptions and generates ATS-optimized, tailored resumes using NLP techniques.
         </li>
-        <li><strong>Research Paper: Human-Computer Interactions Using AI</strong></li>
+        <li><strong>ExplainMate – AI Document Summarizer & Smart Q&A Assistant</strong><br>
+          Created a dual-mode tool (Custom GPT & Streamlit app) that summarizes long documents and intelligently answers questions, even when content is outside the source.
+        </li>
       </ul>
 
       <h2>Education</h2>
       <ul>
-        <li><strong>Master’s in Computer Science</strong> – Rivier University (January 2024)<br>GPA: 3.5/4</li>
-        <li><strong>Bachelor’s in Computer Science</strong> – Kakatiya University (May 2019)<br>GPA: 7.0/10</li>
+        <li><strong>Master’s in Computer Science</strong> – Rivier University (2024) | GPA: 3.5/4</li>
+        <li><strong>Bachelor’s in Computer Science</strong> – Kakatiya University (2019) | GPA: 7.0/10</li>
       </ul>
     </div>
   </div>
@@ -231,11 +203,7 @@
     const navbar = document.querySelector('.navbar');
     window.onscroll = function () {
       const currentScrollPos = window.pageYOffset;
-      if (prevScrollPos > currentScrollPos || currentScrollPos === 0) {
-        navbar.style.top = "0";
-      } else {
-        navbar.style.top = "-80px";
-      }
+      navbar.style.top = (prevScrollPos > currentScrollPos || currentScrollPos === 0) ? "0" : "-80px";
       prevScrollPos = currentScrollPos;
     };
   </script>
